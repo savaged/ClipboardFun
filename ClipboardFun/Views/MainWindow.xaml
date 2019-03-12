@@ -1,0 +1,29 @@
+﻿<Window x:Class="Savaged.ClipboardFun.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ClipboardFun"
+        mc:Ignorable="d"
+        Title="Clipboard Fun" Height="1000" Width="1800">
+    <DockPanel LastChildFill="True">
+        <Menu DockPanel.Dock="Top" Margin="0,0,0.4,0">
+            <MenuItem Header="_Clear All" Command="{Binding ClearCmd}"/>
+            <MenuItem Header="_Paste" Command="{Binding PasteCmd}"/>
+        </Menu>
+        <Grid Margin="20">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <TextBox Grid.Row="0" Text="{Binding Raw, Mode=OneWay}" VerticalScrollBarVisibility="Auto"/>
+            <TextBox Grid.Row="1" Text="{Binding CSV, Mode=OneWay}" VerticalScrollBarVisibility="Auto"/>
+            <TextBox Grid.Row="2" Text="{Binding JSON, Mode=OneWay}" VerticalScrollBarVisibility="Auto"/>
+            <DataGrid Grid.Row="3" ItemsSource="{Binding Index}" VerticalScrollBarVisibility="Auto">
+                
+            </DataGrid>
+        </Grid>
+    </DockPanel>
+</Window>
