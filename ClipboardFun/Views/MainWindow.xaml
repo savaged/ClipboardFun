@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="Clipboard Fun" Height="1000" Width="1800">
     <Window.InputBindings>
-        <KeyBinding Command="{Binding PasetCmd}" Gesture="Ctrl+v"/>
+        <KeyBinding Command="{Binding PasteCmd}" Gesture="Ctrl+v"/>
     </Window.InputBindings>
     <DockPanel LastChildFill="True">
         <Menu DockPanel.Dock="Top" Margin="0,0,0.4,0">

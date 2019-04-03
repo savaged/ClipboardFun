@@ -51,7 +51,7 @@ namespace Savaged.ClipboardFun.ViewModels
         private void OnClear()
         {
             Clipboard.Clear();
-            Raw = JSON = string.Empty;
+            Raw = CSV = JSON = string.Empty;
             Index.Clear();
         }
 
